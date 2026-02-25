@@ -17,7 +17,6 @@ import TimelineItem from './content/TimelineItem';
 import ProjectCard from './content/ProjectCard';
 import AchievementCard from './content/AchievementCard';
 import theme from '../theme/Theme';
-import Resume from './details/Resume';
 
 const MainContent = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -84,8 +83,6 @@ const MainContent = () => {
                             aria-controls={`tabpanel-${index}`}
                         />
                     ))}
-
-                    {isMobile ? <Box sx={{ paddingRight: 1, transform: "translateY(4px)" }}><Resume /></Box> : <></>}
                 </Tabs>
             </Box>
 

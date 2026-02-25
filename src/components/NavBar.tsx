@@ -1,16 +1,16 @@
-import { AppBar, Toolbar, Typography, Box, IconButton, useTheme, useMediaQuery } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Toolbar, Typography, Box, useTheme, useMediaQuery } from '@mui/material';
+// import MenuIcon from '@mui/icons-material/Menu';
 import Resume from './details/Resume';
 import GitHub from './contact/Github';
 import LinkedIn from './contact/LinkedIn';
 import { Profile } from '../data/data';
 import Kaggle from './contact/Kaggle';
 
-interface NavbarProps {
-    onMobileMenuToggle?: () => void;
-}
+// interface NavbarProps {
+//     onMobileMenuToggle?: () => void;
+// }
 
-const Navbar = ({ onMobileMenuToggle }: NavbarProps) => {
+const Navbar = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -27,8 +27,11 @@ const Navbar = ({ onMobileMenuToggle }: NavbarProps) => {
             }}
         >
             <Toolbar sx={{ justifyContent: 'space-between', px: { xs: 2, md: 4 } }}>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                    {isMobile && (
+                <Box sx={{
+                    display: 'flex', alignItems: 'center', gap: 1.5, justifyContent: 'space-between',
+                    width: '100%',
+                }}>
+                    {/* {isMobile && (
                         <IconButton
                             edge="start"
                             aria-label="menu"
@@ -42,7 +45,7 @@ const Navbar = ({ onMobileMenuToggle }: NavbarProps) => {
                         >
                             <MenuIcon />
                         </IconButton>
-                    )}
+                    )} */}
                     <Box
                         sx={{
                             display: 'flex',
@@ -65,6 +68,10 @@ const Navbar = ({ onMobileMenuToggle }: NavbarProps) => {
                             {Profile.name.split(' ')[0]}'s Portfolio
                         </Typography>
                     </Box>
+
+                    {isMobile ?
+                        <Resume /> : <></>
+                    }
                 </Box>
 
                 {!isMobile &&
