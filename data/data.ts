@@ -4,7 +4,8 @@ export const Profile = {
     email: 'arindombora10@gmail.com',
     location: 'Pune, Maharashtra, India',
     bio:
-        "A software engineer who loves puzzles and rarely backs down from challenges. I enjoy discussing ML solutions and system architectures. Else I doomscroll, play SmashKarts, or overthink model architectures.",
+        "A software engineer who loves puzzles and rarely backs down from challenges. I enjoy discussing ML solutions and system architectures."
+    ,
     skills: [
         'Python',
         'Machine Learning',
@@ -18,12 +19,12 @@ export const Profile = {
     linkedIn: 'https://www.linkedin.com/in/arindom-bora-1839a1244/',
     github: 'https://github.com/AriBora',
     kaggle: 'https://www.kaggle.com/arindombora10',
-    resumeUrl: 'https://drive.google.com/file/d/1NMTOepYICpCNT1k-k1mEfZldU5ipeNLt/view',
+    resumeUrl: 'https://drive.google.com/uc?export=download&id=1NMTOepYICpCNT1k-k1mEfZldU5ipeNLt',
 };
 
 export const educationData = [
     {
-        title: 'Bachelor of Technology in Mechanical Engineering',
+        title: 'B.Tech in Mechanical Engineering',
         subtitle: 'Indian Institute of Technology Kanpur',
         date: 'Nov 2021 - Jul 2025',
         grade: 'CGPA: 9.0/10',
@@ -61,7 +62,7 @@ export const experienceData = [
         date: 'Jul 2025 - Present',
         description:
             [
-                "Platform Engineering team member of enterprise BI tools (Looker, Tableau, SAP BO) used by 30k+ global users across 400+ teams",
+                "Platform Engineer managing enterprise BI tools (Looker, Tableau, SAP BO) used by 30k+ global users across 400+ teams",
                 "Implemented automation solutions for Looker admin workflows, reducing turnaround time by 90%.",
                 "Automated cross-environment report migrations in SAP BI Platform using Java SDKs & Ansible",
                 "Solved a critical connectivity issue of Tableau with CloudSQL by designing a custom proxy solution.",
@@ -121,6 +122,18 @@ export const projectsData = [
             ],
         tags: ['Python', 'Flask', 'BERT', 'HNSW', 'Longformer'],
         link: "https://github.com/Attention-is-All-We-Need/Document-Summary-Generator",
+    },
+    {
+        title: 'Image Restoration',
+        date: 'Mar 2024 - Apr 2024',
+        description:
+            [
+                "Developed a system to restore clear human face images from noisy inputs using generative models.",
+                "Trained VAE & GAN models on a curated dataset of 8000 paired images for image reconstruction.",
+                "Improved image quality, increased SSIM from 0.754 to 0.844 & reduced NRMSE from 0.405 to 0.161."
+            ],
+        tags: ['Python', 'VAE', 'GAN', 'Deep Learning'],
+        link: "https://github.com/AriBora/Image-Restoration",
     }
 ];
 

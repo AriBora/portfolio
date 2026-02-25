@@ -1,5 +1,5 @@
 import { Box, Chip, Typography } from "@mui/material";
-import { Profile } from "../../data/data";
+import { Profile } from "../../../data/data";
 
 export default function Skills() {
     return (
@@ -24,16 +24,19 @@ export default function Skills() {
                         label={skill}
                         size="small"
                         sx={{
-                            background: index % 2 === 0
-                                ? 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)'
-                                : 'linear-gradient(135deg, #ec4899 0%, #f472b5cd 100%)',
-                            color: 'white',
-                            fontWeight: 500,
-                            fontSize: '0.75rem',
-                            transition: 'all 0.2s',
+                            background: 'rgba(6, 182, 212, 0.05)', // Very subtle Cyan tint
+                            border: index % 2 === 0
+                                ? '1px solid rgba(6, 182, 212, 0.3)' // Cyan border
+                                : '1px solid rgba(99, 102, 241, 0.3)', // Indigo border
+                            color: index % 2 === 0 ? '#67e8f9' : '#a5b4fc', // Lightened text colors
+                            fontWeight: 600,
+                            fontSize: '0.7rem',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.05em',
                             '&:hover': {
-                                transform: 'scale(1.05)',
-                                boxShadow: '0 4px 12px -2px rgba(129, 140, 248, 0.4)',
+                                background: index % 2 === 0 ? '#06b5d477' : '#6365f161',
+                                borderColor: index % 2 === 0 ? '#06b6d4' : '#6366f1',
+                                transform: 'translateY(-2px)', // Lift effect instead of scale
                             },
                         }}
                     />

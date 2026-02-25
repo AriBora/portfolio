@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { Profile } from "../../data/data";
+import { Profile } from "../../../data/data";
 
 const GitHub = () => {
     return (

@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Box, useTheme, useMediaQuery } from '@mui/
 import Resume from './details/Resume';
 import GitHub from './contact/Github';
 import LinkedIn from './contact/LinkedIn';
-import { Profile } from '../data/data';
+import { Profile } from '../../data/data';
 import Kaggle from './contact/Kaggle';
 
 // interface NavbarProps {
@@ -19,10 +19,7 @@ const Navbar = () => {
             position="fixed"
             elevation={0}
             sx={{
-                bgcolor: 'rgba(10, 10, 26, 0.85)',
                 backdropFilter: 'blur(20px)',
-                borderBottom: '1px solid',
-                borderColor: 'rgba(129, 140, 248, 0.1)',
                 zIndex: theme.zIndex.drawer + 1,
             }}
         >
@@ -56,14 +53,9 @@ const Navbar = () => {
                         <Typography
                             variant="h5"
                             sx={{
-                                fontFamily: "Roboto",
-                                fontWeight: 800,
-                                background: 'linear-gradient(135deg, #a5b4fc 0%, #f9a8d4 100%)',
-                                backgroundClip: 'text',
-                                WebkitBackgroundClip: 'text',
-                                WebkitTextFillColor: 'transparent',
-                                letterSpacing: '-0.02em',
+                                color: 'inherit',
                             }}
+                            className='navbarText'
                         >
                             {Profile.name.split(' ')[0]}'s Portfolio
                         </Typography>

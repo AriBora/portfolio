@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import DownloadIcon from '@mui/icons-material/Download';
-import { Profile } from "../../data/data";
+import { Profile } from "../../../data/data";
 
 export default function Resume() {
     return (
@@ -9,8 +9,6 @@ export default function Resume() {
             color="primary"
             startIcon={<DownloadIcon />}
             href={Profile.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             sx={{
                 my: 1.5,
                 px: 3,

@@ -9,7 +9,7 @@ import Address from './contact/Address';
 import ProfilePhoto from './details/ProfilePhoto';
 import Skills from './details/Skills';
 import Bio from './details/Bio';
-import { Profile } from '../data/data';
+import { Profile } from '../../data/data';
 import theme from '../theme/Theme';
 import LinkedIn from './contact/LinkedIn';
 import GitHub from './contact/Github';

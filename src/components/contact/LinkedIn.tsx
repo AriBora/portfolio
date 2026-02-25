@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Profile } from "../../data/data";
+import { Profile } from "../../../data/data";
 
 const LinkedIn = () => {
     return (

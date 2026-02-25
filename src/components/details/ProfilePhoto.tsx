@@ -1,5 +1,5 @@
 import { Avatar, Box } from "@mui/material";
-import { Profile } from "../../data/data";
+import { Profile } from "../../../data/data";
 
 interface ProfilePhotoProps {
     isExpanded: boolean;

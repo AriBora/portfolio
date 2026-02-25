@@ -1,5 +1,5 @@
 import { Paper, Typography } from "@mui/material";
-import { Profile } from "../../data/data";
+import { Profile } from "../../../data/data";
 
 export default function Bio() {
     return (

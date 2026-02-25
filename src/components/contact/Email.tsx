@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { Profile } from "../../data/data";
+import { Profile } from "../../../data/data";
 import EmailIcon from '@mui/icons-material/Email';
 
 export default function Email() {

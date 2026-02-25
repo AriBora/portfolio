@@ -3,7 +3,7 @@ import { Box, Toolbar, useMediaQuery, useTheme } from '@mui/material';
 import Navbar from './NavBar';
 import Sidebar from './SideBar';
 import MainContent from './MainContent';
-import { Profile } from '../data/data';
+import { Profile } from '../../data/data';
 
 const PortfolioLayout = () => {
     const theme = useTheme();

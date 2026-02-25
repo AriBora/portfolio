@@ -27,7 +27,7 @@ const ProjectCard = ({ title, date, description, tags, index, link }: ProjectCar
                     to: { opacity: 1, transform: 'scale(1)' },
                 },
                 '&:hover': {
-                    boxShadow: '0 24px 48px -12px rgba(99, 102, 241, 0.35)',
+                    boxShadow: '0 24px 48px -12px rgba(6, 182, 212, 0.3)',
                     transform: 'translateY(-6px) scale(1.01)',
                 },
             }}
@@ -94,24 +94,26 @@ const ProjectCard = ({ title, date, description, tags, index, link }: ProjectCar
                     )}
                 </Typography>
                 <Stack direction="row" spacing={0.75} sx={{ flexWrap: 'wrap', gap: 0.75 }}>
-                    {tags.map((tag, tagIndex) => (
+                    {tags.map((tag, index) => (
                         <Chip
                             key={tag}
                             label={tag}
                             size="small"
                             sx={{
-                                // background: tagIndex % 3 === 0
-                                //     ? 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)'
-                                //     : tagIndex % 3 === 1
-                                //         ? 'linear-gradient(135deg, #ec4899 0%, #f472b6 100%)'
-                                //         : 'linear-gradient(135deg, #10b981 0%, #34d399 100%)',
-                                background: tagIndex % 2 === 0
-                                    ? 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)'
-                                    : 'linear-gradient(135deg, #ec4899 0%, #f472b6 100%)',
-                                color: 'white',
+                                background: 'rgba(6, 182, 212, 0.05)', // Very subtle Cyan tint
+                                border: index % 2 === 0
+                                    ? '1px solid rgba(6, 182, 212, 0.3)' // Cyan border
+                                    : '1px solid rgba(99, 102, 241, 0.3)', // Indigo border
+                                color: index % 2 === 0 ? '#67e8f9' : '#a5b4fc', // Lightened text colors
                                 fontWeight: 600,
                                 fontSize: '0.7rem',
-                                boxShadow: '0 2px 8px -2px rgba(99, 102, 241, 0.4)',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.05em',
+                                '&:hover': {
+                                    background: index % 2 === 0 ? '#06b5d477' : '#6365f161',
+                                    borderColor: index % 2 === 0 ? '#06b6d4' : '#6366f1',
+                                    transform: 'translateY(-2px)', // Lift effect instead of scale
+                                },
                             }}
                         />
                     ))}

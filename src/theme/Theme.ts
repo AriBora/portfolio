@@ -4,89 +4,52 @@ const theme = createTheme({
     palette: {
         mode: 'dark',
         primary: {
-            main: '#818cf8',
-            light: '#a5b4fc',
-            dark: '#6366f1',
-            contrastText: '#0f0f23',
+            main: '#06b6d4', // Electric Cyan
+            light: '#67e8f9',
+            dark: '#0891b2',
+            contrastText: '#020617',
         },
         secondary: {
-            main: '#f472b6',
-            light: '#f9a8d4',
-            dark: '#ec4899',
-            contrastText: '#0f0f23',
+            main: '#6366f1', // Indigo (used sparingly as an accent)
+            light: '#a5b4fc',
+            dark: '#4338ca',
         },
         background: {
-            default: '#0a0a1a',
-            paper: '#12122a',
+            default: '#020617', // Deep Obsidian
+            paper: '#0f172a',    // Slate Navy
         },
         text: {
-            primary: '#e2e8f0',
+            primary: '#f8fafc',
             secondary: '#94a3b8',
         },
-        divider: 'rgba(129, 140, 248, 0.1)',
-        success: {
-            main: '#34d399',
-            light: '#6ee7b7',
-        },
-        warning: {
-            main: '#fbbf24',
-        },
-        info: {
-            main: '#38bdf8',
-        },
+        divider: 'rgba(148, 163, 184, 0.1)',
     },
     typography: {
-        fontFamily: '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif',
-        h4: {
-            fontWeight: 800,
-            letterSpacing: '-0.03em',
-        },
-        h5: {
-            fontWeight: 700,
-            letterSpacing: '-0.02em',
-        },
-        h6: {
-            fontWeight: 600,
-            letterSpacing: '-0.01em',
-        },
-        body1: {
-            lineHeight: 1.7,
-        },
-        body2: {
-            lineHeight: 1.6,
-            color: '#94a3b8',
-        },
+        fontFamily: '"JetBrains Mono", "Fira Code", "Inter", sans-serif',
+        h4: { fontWeight: 700, letterSpacing: '-0.01em' },
+        h5: { fontWeight: 600, letterSpacing: '0.01em' },
+        body1: { lineHeight: 1.8 },
     },
     shape: {
-        borderRadius: 16,
+        borderRadius: 8, // Shaper corners feel less "bubbly" and more professional
     },
-    shadows: [
-        'none',
-        '0 1px 2px 0 rgb(0 0 0 / 0.2)',
-        '0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3)',
-        '0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2)',
-        '0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2)',
-        '0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.2)',
-        '0 25px 50px -12px rgb(0 0 0 / 0.5)',
-        ...Array(18).fill('none'),
-    ] as any,
     components: {
         MuiButton: {
             styleOverrides: {
                 root: {
-                    textTransform: 'none',
-                    fontWeight: 600,
-                    borderRadius: 12,
-                    padding: '12px 24px',
-                    transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+                    textTransform: 'uppercase', // Professional/Technical feel
+                    letterSpacing: '0.05em',
+                    fontWeight: 700,
+                    borderRadius: 4,
+                    padding: '10px 20px',
                 },
                 contained: {
-                    boxShadow: '0 4px 14px 0 rgba(129, 140, 248, 0.3)',
-                    background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                    background: '#06b6d4',
+                    boxShadow: 'none',
                     '&:hover': {
-                        boxShadow: '0 6px 20px 0 rgba(129, 140, 248, 0.45)',
-                        transform: 'translateY(-1px)',
-                        background: 'linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%)',
+                        background: '#0891b2',
+                        boxShadow: '0 0 15px rgba(6, 182, 212, 0.4)',
+                        transform: 'none',
                     },
                 },
             },
@@ -94,32 +57,11 @@ const theme = createTheme({
         MuiCard: {
             styleOverrides: {
                 root: {
-                    boxShadow: '0 4px 20px -4px rgba(0, 0, 0, 0.5)',
-                    border: '1px solid rgba(129, 140, 248, 0.08)',
-                    backdropFilter: 'blur(8px)',
-                    backgroundColor: 'rgba(17, 17, 43, 0.8)',
-                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                },
-            },
-        },
-        MuiPaper: {
-            styleOverrides: {
-                root: {
+                    backgroundColor: '#0f172a',
+                    border: '1px solid #1e293b',
                     backgroundImage: 'none',
-                },
-            },
-        },
-        MuiTab: {
-            styleOverrides: {
-                root: {
-                    textTransform: 'none',
-                    fontWeight: 600,
-                    fontSize: '0.9375rem',
-                    minHeight: 56,
-                    transition: 'all 0.2s ease',
-                    color: '#94a3b8',
-                    '&.Mui-selected': {
-                        color: '#a5b4fc',
+                    '&:hover': {
+                        borderColor: '#334155',
                     },
                 },
             },
@@ -127,20 +69,34 @@ const theme = createTheme({
         MuiTabs: {
             styleOverrides: {
                 indicator: {
-                    height: 3,
-                    borderRadius: 3,
-                    background: 'linear-gradient(90deg, #818cf8 0%, #f472b6 100%)',
+                    height: 2,
+                    background: '#06b6d4', // Solid color is often classier than gradients
                 },
             },
         },
-        MuiChip: {
+        MuiTypography: {
             styleOverrides: {
                 root: {
-                    fontWeight: 500,
-                    borderRadius: 8,
+                    '&.navbarText': {
+                        fontFamily: "JetBrains Mono",
+                        fontWeight: 800,
+                        color: '#f8fafc',
+                        background: 'linear-gradient(to bottom, #ffffffe1 0%, #c3cfdf 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                    },
+                    '&.sectionHeading': {
+                        fontSize: '1.25rem',
+                        fontWeight: 700,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.1em',
+                        color: '#06b6d4',
+                        background: 'none',
+                        WebkitTextFillColor: 'initial',
+                    },
                 },
             },
-        },
+        }
     },
 });
 

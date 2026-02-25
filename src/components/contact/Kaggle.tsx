@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import SvgIcon from '@mui/material/SvgIcon';
-import { Profile } from "../../data/data";
+import { Profile } from "../../../data/data";
 
 const Kaggle = () => {
     return (

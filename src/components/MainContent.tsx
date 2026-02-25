@@ -11,7 +11,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
 
-import { achievementsData, educationData, experienceData, projectsData } from '../data/data';
+import { achievementsData, educationData, experienceData, projectsData } from '../../data/data';
 import TabPanel from './content/TabPanel';
 import TimelineItem from './content/TimelineItem';
 import ProjectCard from './content/ProjectCard';
