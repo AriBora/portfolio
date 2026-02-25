@@ -112,18 +112,6 @@ export const projectsData = [
         link: "https://drive.google.com/file/d/1amaDga797bQOsOt8UMzTtMWjFDDcJTQm/view",
     },
     {
-        title: 'Summary Generator',
-        date: 'Jun 2023',
-        description:
-            [
-                "Developed a summarization system utilizing Longformer Encoder Decoder model to process long-context documents",
-                "Implemented an RAG pipeline using BERT embeddings & HNSW indexing for low-latency Q&A over generated summaries",
-                "Designed a web interface using Flask, JavaScript, & HTML/CSS for end-to-end document processing & analytical querying"
-            ],
-        tags: ['Python', 'Flask', 'BERT', 'HNSW', 'Longformer'],
-        link: "https://github.com/Attention-is-All-We-Need/Document-Summary-Generator",
-    },
-    {
         title: 'Image Restoration',
         date: 'Mar 2024 - Apr 2024',
         description:
@@ -134,6 +122,18 @@ export const projectsData = [
             ],
         tags: ['Python', 'VAE', 'GAN', 'Deep Learning'],
         link: "https://github.com/AriBora/Image-Restoration",
+    },
+    {
+        title: 'Summary Generator',
+        date: 'Jun 2023',
+        description:
+            [
+                "Developed a summarization system utilizing Longformer Encoder Decoder model to process long-context documents",
+                "Implemented an RAG pipeline using BERT embeddings & HNSW indexing for low-latency Q&A over generated summaries",
+                "Designed a web interface using Flask, JavaScript, & HTML/CSS for end-to-end document processing & analytical querying"
+            ],
+        tags: ['Python', 'Flask', 'BERT', 'HNSW', 'Longformer'],
+        link: "https://github.com/Attention-is-All-We-Need/Document-Summary-Generator",
     }
 ];
 

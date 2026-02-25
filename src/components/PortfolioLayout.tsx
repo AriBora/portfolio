@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Toolbar, useMediaQuery, useTheme } from '@mui/material';
+import { Box, useMediaQuery, useTheme } from '@mui/material';
 import Navbar from './NavBar';
 import Sidebar from './SideBar';
 import MainContent from './MainContent';
@@ -19,7 +19,6 @@ const PortfolioLayout = () => {
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
             <Navbar />
-            <Toolbar />
 
             <Box
                 sx={{

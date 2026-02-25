@@ -16,7 +16,7 @@ const Navbar = () => {
 
     return (
         <AppBar
-            position="fixed"
+            position="relative"
             elevation={0}
             sx={{
                 backdropFilter: 'blur(20px)',
