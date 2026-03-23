@@ -30,6 +30,7 @@ const ProjectCard = ({ title, date, description, tags, index, link }: ProjectCar
                     boxShadow: '0 24px 48px -12px rgba(6, 182, 212, 0.3)',
                     transform: 'translateY(-6px) scale(1.01)',
                 },
+                marginLeft: 7,
             }}
         >
             <CardContent sx={{ p: 3 }}>
@@ -65,11 +66,11 @@ const ProjectCard = ({ title, date, description, tags, index, link }: ProjectCar
                         label={date}
                         size="small"
                         sx={{
-                            background: 'rgba(129, 140, 248, 0.12)',
+                            background: 'rgba(59, 130, 246, 0.12)',
                             fontWeight: 600,
                             fontSize: '0.75rem',
-                            color: '#a5b4fc',
-                            border: '1px solid rgba(129, 140, 248, 0.2)',
+                            color: '#93c5fd',
+                            border: '1px solid rgba(59, 130, 246, 0.2)',
                         }}
                     />
                 </Box>
@@ -100,19 +101,19 @@ const ProjectCard = ({ title, date, description, tags, index, link }: ProjectCar
                             label={tag}
                             size="small"
                             sx={{
-                                background: 'rgba(6, 182, 212, 0.05)', // Very subtle Cyan tint
+                                background: index % 2 === 0 ? 'rgba(6, 182, 212, 0.05)' : 'rgba(59, 130, 246, 0.05)',
                                 border: index % 2 === 0
-                                    ? '1px solid rgba(6, 182, 212, 0.3)' // Cyan border
-                                    : '1px solid rgba(99, 102, 241, 0.3)', // Indigo border
-                                color: index % 2 === 0 ? '#67e8f9' : '#a5b4fc', // Lightened text colors
+                                    ? '1px solid rgba(6, 182, 212, 0.3)'
+                                    : '1px solid rgba(59, 130, 246, 0.3)',
+                                color: index % 2 === 0 ? '#67e8f9' : '#93c5fd',
                                 fontWeight: 600,
                                 fontSize: '0.7rem',
                                 textTransform: 'uppercase',
                                 letterSpacing: '0.05em',
                                 '&:hover': {
-                                    background: index % 2 === 0 ? '#06b5d477' : '#6365f161',
-                                    borderColor: index % 2 === 0 ? '#06b6d4' : '#6366f1',
-                                    transform: 'translateY(-2px)', // Lift effect instead of scale
+                                    background: index % 2 === 0 ? 'rgba(6, 182, 212, 0.2)' : 'rgba(59, 130, 246, 0.2)',
+                                    borderColor: index % 2 === 0 ? '#06b6d4' : '#3b82f6',
+                                    transform: 'translateY(-2px)',
                                 },
                             }}
                         />

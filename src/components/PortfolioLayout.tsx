@@ -1,42 +1,41 @@
-import { useState } from 'react';
-import { Box, useMediaQuery, useTheme } from '@mui/material';
+import { Box } from '@mui/material';
 import Navbar from './NavBar';
-import Sidebar from './SideBar';
+import HeroSection from './HeroSection';
 import MainContent from './MainContent';
-import { Profile } from '../../data/data';
+import Footer from './Footer';
+import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const PortfolioLayout = () => {
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-    const [sidebarExpanded, setSidebarExpanded] = useState(true);
-
-    const profileData = Profile;
-
-    const handleSidebarToggle = () => {
-        setSidebarExpanded(!sidebarExpanded);
-    };
+    // Track the currently visible section based on scroll position
+    const activeSection = useScrollSpy(['about', 'experience', 'education', 'projects', 'achievements']);
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-            <Navbar />
-
+        <Box
+            sx={{
+                minHeight: '100vh',
+                display: 'flex',
+                flexDirection: 'column',
+                bgcolor: 'transparent',
+            }}
+        >
+            <Navbar activeSection={activeSection.charAt(0).toUpperCase() + activeSection.slice(1)} />
+            
+            {/* Centered Content Wrapper */}
             <Box
                 sx={{
-                    display: 'flex',
-                    flexDirection: { xs: 'column', md: 'row' },
+                    maxWidth: 1080,
+                    width: '100%',
+                    mx: 'auto',
                     flexGrow: 1,
-                    background: 'linear-gradient(180deg, #0a0a1a 0%, #0f0f2e 100%)',
+                    display: 'flex',
+                    flexDirection: 'column',
                 }}
             >
-                {/* Sidebar - Mobile on top (full width), Desktop on left (collapsible) */}
-                <Sidebar
-                    {...profileData}
-                    isExpanded={isMobile ? true : sidebarExpanded}
-                    onToggle={isMobile ? () => { } : handleSidebarToggle}
-                />
-
+                <HeroSection />
                 <MainContent />
             </Box>
+
+            <Footer />
         </Box>
     );
 };

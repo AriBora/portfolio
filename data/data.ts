@@ -22,6 +22,15 @@ export const Profile = {
     resumeUrl: 'https://drive.google.com/uc?export=download&id=1NMTOepYICpCNT1k-k1mEfZldU5ipeNLt',
 };
 
+export const Title = ["Graduate Analyst at Deutsche Bank", "Full-Stack Engineer and ML Enthusiast"]
+
+export const Skills = {
+    "Programming Languages": ["Python", "Java", "C++", "JavaScript"],
+    "Python Libraries": ["Tensorflow", "Pytorch", "Langchain", "Stable-baselines3"],
+    "Web Development": ["React", "Flask", "FastAPI", "HTML", "CSS"],
+    "Tools": ["Git", "GCP", "Terraform", "LaTeX", "Ansible", "Looker", "Tableau", "TeamCity"],
+}
+
 export const educationData = [
     {
         title: 'B.Tech in Mechanical Engineering',
