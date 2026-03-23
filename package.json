@@ -1,8 +1,8 @@
 {
   "name": "portfolio-website",
-  "homepage": "https://AriBora.github.io/",
+  "homepage": "https://AriBora.github.io/portfolio/",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
