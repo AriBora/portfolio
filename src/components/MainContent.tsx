@@ -82,10 +82,10 @@ const MainContent = () => {
             {/* Achievements Section */}
             <Box id="achievements" component="section" sx={{ scrollMarginTop: 80 }}>
                 <SectionHeader icon={<EmojiEventsIcon />} title="Achievements" />
-                <Box sx={{ 
-                    display: 'grid', 
-                    gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, 
-                    gap: 3 
+                <Box sx={{
+                    display: 'grid',
+                    gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
+                    gap: 3
                 }}>
                     {achievementsData.map((item, index) => (
                         <AchievementCard key={index} {...item} index={index} />

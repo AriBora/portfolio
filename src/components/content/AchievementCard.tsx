@@ -1,5 +1,4 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 interface AchievementCardProps {
     title: string;
