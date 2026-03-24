@@ -15,8 +15,8 @@ const theme = createTheme({
             dark: '#4338ca',
         },
         background: {
-            default: '#020617', // Deep Obsidian
-            paper: '#0f172a',    // Slate Navy
+            default: '#000000ff', // Deep Obsidian
+            paper: '#0c0c0aff',    // Slate Navy
         },
         text: {
             primary: '#f8fafc',
@@ -57,8 +57,8 @@ const theme = createTheme({
         MuiCard: {
             styleOverrides: {
                 root: {
-                    backgroundColor: '#0f172a',
-                    border: '1px solid #1e293b',
+                    backgroundColor: '#1a1a1a',
+                    border: '1px solid #1a1a1a',
                     backgroundImage: 'none',
                     '&:hover': {
                         borderColor: '#334155',

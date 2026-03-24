@@ -13,7 +13,7 @@ export default function ProfilePhoto({ isExpanded }: ProfilePhotoProps) {
             }}
         >
             <Avatar
-                src={Profile.avatarUrl}
+                src={/*Profile.avatarUrl*/""}
                 alt={Profile.name}
                 sx={{
                     width: isExpanded ? 130 : 50,

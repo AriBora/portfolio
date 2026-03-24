@@ -9,7 +9,7 @@ export default function SkillsPanel() {
         <Box
             sx={{
                 width: '100%',
-                bgcolor: 'rgba(15, 23, 42, 0.6)',
+                bgcolor: '#1a1a1a',
                 border: '1px solid rgba(148, 163, 184, 0.08)',
                 borderRadius: 3,
                 p: { xs: 2.5, md: 3 },
@@ -30,7 +30,7 @@ export default function SkillsPanel() {
                 <TerminalIcon
                     sx={{
                         fontSize: 20,
-                        color: 'primary.main',
+                        color: '#facc15',
                     }}
                 />
                 <Typography
@@ -38,7 +38,7 @@ export default function SkillsPanel() {
                         fontFamily: '"JetBrains Mono", monospace',
                         fontWeight: 700,
                         fontSize: '0.95rem',
-                        color: '#e2e8f0',
+                        color: '#facc15',
                         letterSpacing: '0.02em',
                     }}
                 >
@@ -65,25 +65,26 @@ export default function SkillsPanel() {
                             {category}
                         </Typography>
                         <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.75 }}>
-                            {skills.map((skill, index) => (
+                            {skills.map((skill) => (
                                 <Chip
                                     key={skill}
                                     label={skill}
                                     size="small"
                                     sx={{
-                                        background: index % 2 === 0 ? 'rgba(6, 182, 212, 0.04)' : 'rgba(59, 130, 246, 0.04)',
-                                        border: index % 2 === 0 ? '1px solid rgba(6, 182, 212, 0.2)' : '1px solid rgba(59, 130, 246, 0.2)',
-                                        color: index % 2 === 0 ? '#67e8f9' : '#93c5fd',
+                                        background: 'rgba(255, 255, 255, 0.03)',
+                                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                                        color: '#94a3b8',
                                         fontWeight: 500,
                                         fontSize: '0.75rem',
                                         letterSpacing: '0.02em',
                                         height: 28,
                                         transition: 'all 0.2s ease',
                                         '&:hover': {
-                                            background: index % 2 === 0 ? 'rgba(6, 182, 212, 0.12)' : 'rgba(59, 130, 246, 0.12)',
-                                            borderColor: index % 2 === 0 ? '#06b6d4' : '#3b82f6',
+                                            background: 'rgba(250, 204, 21, 0.05)',
+                                            borderColor: '#facc15',
+                                            color: '#facc15',
                                             transform: 'translateY(-1px)',
-                                            boxShadow: index % 2 === 0 ? '0 4px 12px rgba(6, 182, 212, 0.15)' : '0 4px 12px rgba(59, 130, 246, 0.15)',
+                                            boxShadow: '0 4px 12px rgba(250, 204, 21, 0.1)',
                                         },
                                     }}
                                 />

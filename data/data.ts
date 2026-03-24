@@ -1,20 +1,8 @@
 export const Profile = {
     name: 'Arindom Bora',
-    title: 'Graduate Analyst at Deutsche Bank',
     email: 'arindombora10@gmail.com',
     location: 'Pune, Maharashtra, India',
-    bio:
-        "A software engineer who loves puzzles and rarely backs down from challenges. I enjoy discussing ML solutions and system architectures."
-    ,
-    skills: [
-        'Python',
-        'Machine Learning',
-        'NLP',
-        'React',
-        'TypeScript',
-        'GCP',
-        'System Design',
-    ],
+    bio: "I develop web apps, train deep learning models, and build agentic AI solutions. 1+ year of experience in development and data analytics, with hands-on ML internships.",
     avatarUrl: 'https://lh3.googleusercontent.com/d/1HYbSNY2QhSMPqElQwnrRyK51xu22GOq8',
     linkedIn: 'https://www.linkedin.com/in/arindom-bora-1839a1244/',
     github: 'https://github.com/AriBora',
@@ -50,7 +38,7 @@ export const educationData = [
         title: 'Higher Secondary Education',
         subtitle: 'Pragya Academy Sr. Secondary School, Jorhat',
         date: 'Jun 2019 - May 2021',
-        grade: 'Percentage: 94.8%',
+        grade: 'Grade: 94.8%',
         description: [],
         tags: [],
     },
@@ -58,7 +46,7 @@ export const educationData = [
         title: 'High School Education',
         subtitle: 'Don Bosco High School Lichubari, Jorhat',
         date: 'Jan 2009 - Apr 2019',
-        grade: 'Percentage: 91.3%',
+        grade: 'Grade: 91.3%',
         description: [],
         tags: [],
     }
@@ -102,7 +90,7 @@ export const experienceData = [
                 "Analyzed clusters of gas hydrate reservoirs based on their gas recovery and land subsidence data.",
                 "Conducted literature review of 3D porous media equations and adapted them to 2D for PINN implementation."
             ],
-        tags: ['Python', 'Pytorch', 'Deep Learning', 'Physics-informed Neural Networks'],
+        tags: ['Python', 'Pytorch', 'Deep Learning', 'Physics-informed Neural Nets'],
     },
 ];
 
@@ -122,7 +110,7 @@ export const projectsData = [
     },
     {
         title: 'Image Restoration',
-        date: 'Mar 2024 - Apr 2024',
+        date: 'Mar 2024',
         description:
             [
                 "Developed a system to restore clear human face images from noisy inputs using generative models.",

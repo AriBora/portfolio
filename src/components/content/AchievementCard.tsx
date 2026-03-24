@@ -21,11 +21,12 @@ const AchievementCard = ({ title, issuer, description, link, index }: Achievemen
                 to: { opacity: 1, transform: 'translateY(0)' },
             },
             '&:hover': {
-                boxShadow: '0 20px 40px -12px rgba(59, 130, 246, 0.25)',
+                boxShadow: '0 20px 40px -12px rgba(250, 204, 21, 0.15)',
                 transform: 'translateY(-4px)',
             },
-            marginLeft: index % 2 === 0 ? 7 : 2,
-            width: 450,
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
         }}
     >
         <CardContent sx={{ p: 3 }}>
@@ -34,7 +35,7 @@ const AchievementCard = ({ title, issuer, description, link, index }: Achievemen
                     <Typography variant="h6" sx={{ fontWeight: 700, fontSize: '1.1rem' }}>
                         {title}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ fontWeight: 500 }}>
+                    <Typography variant="body2" color="#facc15" sx={{ fontWeight: 500 }}>
                         {issuer}
                         {/* • {date} */}
                     </Typography>

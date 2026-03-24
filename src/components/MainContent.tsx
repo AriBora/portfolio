@@ -12,22 +12,20 @@ import AchievementCard from './content/AchievementCard';
 const SectionHeader = ({ icon, title }: { icon: React.ReactNode, title: string }) => (
     <Box sx={{ display: 'flex', alignItems: 'center', mb: 4, gap: 1.5 }}>
         <Box sx={{
-            color: 'primary.main',
+            color: '#facc15',
             display: 'flex',
             p: 1,
-            borderRadius: 2,
-            bgcolor: 'rgba(6, 182, 212, 0.1)',
+            borderRadius: 1,
+            bgcolor: 'rgba(250, 204, 21, 0.1)',
         }}>
             {icon}
         </Box>
         <Typography
             variant="h5"
             sx={{
-                fontWeight: 800,
-                background: 'linear-gradient(135deg, #e2e8f0 0%, #93c5fd 100%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
+                fontWeight: 700,
+                color: '#ffffff',
+                letterSpacing: '-0.02em',
             }}
         >
             {title}

@@ -15,7 +15,7 @@ import GitHub from './contact/Github';
 import Kaggle from './contact/Kaggle';
 import SkillsPanel from './details/Skills';
 
-const HeroSection = () => {
+const IntroSection = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -60,17 +60,6 @@ const HeroSection = () => {
                 background: 'transparent',
                 position: 'relative',
                 overflow: 'hidden',
-                // Subtle radial glow behind content
-                // '&::before': {
-                //     content: '""',
-                //     position: 'absolute',
-                //     top: '-50%',
-                //     left: '-20%',
-                //     width: '60%',
-                //     height: '200%',
-                //     background: 'radial-gradient(ellipse, rgba(6, 182, 212, 0.04) 0%, transparent 70%)',
-                //     pointerEvents: 'none',
-                // },
             }}
         >
             <Box
@@ -90,12 +79,12 @@ const HeroSection = () => {
                         sx={{
                             width: { xs: 96, md: 120 },
                             height: { xs: 96, md: 120 },
-                            border: '3px solid rgba(6, 182, 212, 0.3)',
-                            boxShadow: '0 0 30px rgba(6, 182, 212, 0.15), 0 8px 32px rgba(0,0,0,0.3)',
+                            border: '2px solid rgba(255, 255, 255, 0.1)',
+                            boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
                             transition: 'all 0.3s ease',
                             '&:hover': {
-                                borderColor: 'rgba(6, 182, 212, 0.6)',
-                                boxShadow: '0 0 40px rgba(6, 182, 212, 0.25), 0 8px 32px rgba(0,0,0,0.3)',
+                                borderColor: '#facc15',
+                                boxShadow: '0 0 30px rgba(250, 204, 21, 0.2)',
                                 transform: 'scale(1.05)',
                             },
                             mb: 2
@@ -121,12 +110,13 @@ const HeroSection = () => {
                     {/* Typing Title */}
                     <Typography
                         sx={{
-                            color: theme.palette.primary.main,
+                            color: '#facc15',
                             fontFamily: '"JetBrains Mono", monospace',
-                            fontWeight: 500,
+                            fontWeight: 600,
                             fontSize: { xs: '0.95rem', md: '1.1rem' },
                             mb: 2.5,
                             minHeight: '1.5em',
+                            letterSpacing: '0.05em',
                         }}
                     >
                         {displayText}
@@ -136,7 +126,7 @@ const HeroSection = () => {
                                 display: 'inline-block',
                                 width: 2,
                                 height: '1.1em',
-                                bgcolor: theme.palette.primary.main,
+                                bgcolor: '#facc15',
                                 ml: 0.5,
                                 verticalAlign: 'text-bottom',
                                 animation: 'blink 1s step-end infinite',
@@ -151,7 +141,7 @@ const HeroSection = () => {
                     {/* Bio */}
                     <Typography
                         sx={{
-                            color: '#94a3b8',
+                            color: 'text.secondary',
                             fontSize: { xs: '0.9rem', md: '1rem' },
                             lineHeight: 1.8,
                             mb: 3,
@@ -172,10 +162,10 @@ const HeroSection = () => {
                         }}
                     >
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75 }}>
-                            <LocationOnIcon sx={{ fontSize: 16, color: '#64748b' }} />
+                            <LocationOnIcon sx={{ fontSize: 16, color: '#94a3b8' }} />
                             <Typography
                                 variant="body2"
-                                sx={{ color: '#64748b', fontSize: '0.85rem' }}
+                                sx={{ color: '#94a3b8', fontSize: '0.85rem' }}
                             >
                                 {Profile.location}
                             </Typography>
@@ -192,15 +182,15 @@ const HeroSection = () => {
                                 gap: 0.75,
                                 textDecoration: 'none',
                                 transition: 'color 0.2s',
-                                '&:hover .email-text': { color: '#e2e8f0' },
+                                '&:hover .email-text': { color: '#e9f1fcff' },
                             }}
                         >
-                            <EmailIcon sx={{ fontSize: 16, color: '#64748b' }} />
+                            <EmailIcon sx={{ fontSize: 16, color: '#e4ebf6ff' }} />
                             <Typography
                                 className="email-text"
                                 variant="body2"
                                 sx={{
-                                    color: '#64748b',
+                                    color: '#94a3b8',
                                     fontSize: '0.85rem',
                                     transition: 'color 0.2s',
                                 }}
@@ -233,4 +223,4 @@ const HeroSection = () => {
     );
 };
 
-export default HeroSection;
+export default IntroSection;

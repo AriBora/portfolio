@@ -13,7 +13,7 @@ const Footer = () => {
                 // bgcolor: 'rgba(5, 5, 5, 0.6)',
                 background: 'transparent',
                 // backdropFilter: 'blur(10px)',
-                borderTop: '1px solid rgba(148, 163, 184, 0.1)',
+                borderTop: '1px solid rgba(250, 204, 21, 0.3)',
                 mt: 'auto', // Pushes footer to the bottom of the flex container
                 py: { xs: 3, md: 4 },
             }}
@@ -47,7 +47,7 @@ const Footer = () => {
                         variant="caption"
                         sx={{ color: '#94a3b8', mt: 0.5, display: 'block' }}
                     >
-                        Built with ❤️ using <span style={{ color: '#06b6d4' }}>Antigravity</span> after midnight.
+                        Built with ❤️ using <span style={{ color: '#facc15' }}>Antigravity</span>.
                     </Typography>
                 </Box>
 

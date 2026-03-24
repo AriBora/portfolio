@@ -27,15 +27,14 @@ const ProjectCard = ({ title, date, description, tags, index, link }: ProjectCar
                     to: { opacity: 1, transform: 'scale(1)' },
                 },
                 '&:hover': {
-                    boxShadow: '0 24px 48px -12px rgba(6, 182, 212, 0.3)',
-                    transform: 'translateY(-6px) scale(1.01)',
+                    boxShadow: '0 24px 48px -12px rgba(250, 204, 21, 0.15)',
+                    transform: 'translateY(-6px)',
                 },
-                marginLeft: 7,
             }}
         >
             <CardContent sx={{ p: 3 }}>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1.5 }}>
-                    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 1 }}>
+                    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 0.5 }}>
                         <Typography variant="h6" sx={{ fontWeight: 700, fontSize: '1.15rem', color: 'text.primary' }}>
                             {title}
                         </Typography>
@@ -66,11 +65,11 @@ const ProjectCard = ({ title, date, description, tags, index, link }: ProjectCar
                         label={date}
                         size="small"
                         sx={{
-                            background: 'rgba(59, 130, 246, 0.12)',
+                            background: 'rgba(255, 255, 255, 0.03)',
                             fontWeight: 600,
                             fontSize: '0.75rem',
-                            color: '#93c5fd',
-                            border: '1px solid rgba(59, 130, 246, 0.2)',
+                            color: '#94a3b8',
+                            border: '1px solid rgba(255, 255, 255, 0.1)',
                         }}
                     />
                 </Box>
@@ -87,7 +86,7 @@ const ProjectCard = ({ title, date, description, tags, index, link }: ProjectCar
                             <Button
                                 size="small"
                                 onClick={() => setExpanded((s) => !s)}
-                                sx={{ textTransform: 'none', p: 0 }}
+                                sx={{ textTransform: 'none', p: 0, color: 'rgba(250, 204, 21, 0.7)' }}
                             >
                                 {expanded ? 'Show less' : `Show ${description.length - 2} more`}
                             </Button>
@@ -95,24 +94,23 @@ const ProjectCard = ({ title, date, description, tags, index, link }: ProjectCar
                     )}
                 </Typography>
                 <Stack direction="row" spacing={0.75} sx={{ flexWrap: 'wrap', gap: 0.75 }}>
-                    {tags.map((tag, index) => (
+                    {tags.map((tag) => (
                         <Chip
                             key={tag}
                             label={tag}
                             size="small"
                             sx={{
-                                background: index % 2 === 0 ? 'rgba(6, 182, 212, 0.05)' : 'rgba(59, 130, 246, 0.05)',
-                                border: index % 2 === 0
-                                    ? '1px solid rgba(6, 182, 212, 0.3)'
-                                    : '1px solid rgba(59, 130, 246, 0.3)',
-                                color: index % 2 === 0 ? '#67e8f9' : '#93c5fd',
+                                background: 'rgba(255, 255, 255, 0.03)',
+                                border: '1px solid rgba(255, 255, 255, 0.1)',
+                                color: '#94a3b8',
                                 fontWeight: 600,
                                 fontSize: '0.7rem',
                                 textTransform: 'uppercase',
                                 letterSpacing: '0.05em',
                                 '&:hover': {
-                                    background: index % 2 === 0 ? 'rgba(6, 182, 212, 0.2)' : 'rgba(59, 130, 246, 0.2)',
-                                    borderColor: index % 2 === 0 ? '#06b6d4' : '#3b82f6',
+                                    background: 'rgba(250, 204, 21, 0.05)',
+                                    borderColor: '#facc15',
+                                    color: '#facc15',
                                     transform: 'translateY(-2px)',
                                 },
                             }}

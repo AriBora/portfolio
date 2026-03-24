@@ -17,7 +17,7 @@ const TimelineItem = ({ title, subtitle, date, grade, description, tags, index, 
     const visibleItems = expanded ? description : description.slice(0, 2);
 
     return (
-        <Box sx={{ display: 'flex', position: 'relative' }}>
+        <Box sx={{ display: 'flex', position: 'relative', width: '100%' }}>
             {/* Timeline Line & Dot (Left Column) */}
             <Box
                 sx={{
@@ -26,7 +26,6 @@ const TimelineItem = ({ title, subtitle, date, grade, description, tags, index, 
                     alignItems: 'center',
                     mr: { xs: 2, md: 3 },
                     minWidth: { xs: 16, md: 20 },
-                    marginLeft: 5,
                 }}
             >
                 {/* Visual Dot */}
@@ -37,8 +36,8 @@ const TimelineItem = ({ title, subtitle, date, grade, description, tags, index, 
                         borderRadius: '50%',
                         mt: 3.5, // Align with card title
                         zIndex: 1,
-                        background: 'linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%)',
-                        boxShadow: '0 0 0 4px rgba(6, 182, 212, 0.15)',
+                        background: '#facc15',
+                        boxShadow: '0 0 20px rgba(250, 204, 21, 0.4)',
                     }}
                 />
                 {/* Connecting Line */}
@@ -72,9 +71,9 @@ const TimelineItem = ({ title, subtitle, date, grade, description, tags, index, 
                         to: { opacity: 1, transform: 'translateX(0)' },
                     },
                     '&:hover': {
-                        boxShadow: '0 20px 40px -12px rgba(6, 182, 212, 0.15)',
+                        boxShadow: '0 20px 40px -12px rgba(255, 255, 255, 0.05)',
                         transform: 'translateY(-4px)',
-                        borderColor: 'rgba(6, 182, 212, 0.3)',
+                        borderColor: 'rgba(250, 204, 21, 0.3)',
                     },
                 }}
             >
@@ -88,26 +87,24 @@ const TimelineItem = ({ title, subtitle, date, grade, description, tags, index, 
                                 variant="body2"
                                 sx={{
                                     fontWeight: 600,
-                                    background: 'linear-gradient(135deg, #93c5fd 0%, #67e8f9 100%)',
-                                    backgroundClip: 'text',
-                                    WebkitBackgroundClip: 'text',
-                                    WebkitTextFillColor: 'transparent',
+                                    color: '#facc15',
+                                    letterSpacing: '0.02em',
                                 }}
                             >
                                 {subtitle}
                             </Typography>
                         </Box>
 
-                        <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-end', gap: 2, mt: { xs: 1, md: 0 } }}>
+                        <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 1.5, mt: { xs: 1, md: 0 }, flexWrap: 'wrap' }}>
                             {grade ? <Chip
                                 label={grade}
                                 size="small"
                                 sx={{
-                                    background: 'rgba(59, 130, 246, 0.12)',
+                                    background: 'rgba(255, 255, 255, 0.03)',
                                     fontWeight: 600,
                                     fontSize: '0.75rem',
-                                    color: '#93c5fd',
-                                    border: '1px solid rgba(59, 130, 246, 0.2)',
+                                    color: '#facc15',
+                                    border: '1px solid rgba(250, 204, 21, 0.1)',
                                 }}
                             /> : <></>
                             }
@@ -116,11 +113,11 @@ const TimelineItem = ({ title, subtitle, date, grade, description, tags, index, 
                                 label={date}
                                 size="small"
                                 sx={{
-                                    background: 'rgba(59, 130, 246, 0.12)',
+                                    background: 'rgba(255, 255, 255, 0.03)',
                                     fontWeight: 600,
                                     fontSize: '0.75rem',
-                                    color: '#93c5fd',
-                                    border: '1px solid rgba(59, 130, 246, 0.2)',
+                                    color: '#94a3b8',
+                                    border: '1px solid rgba(255, 255, 255, 0.1)',
                                 }}
                             />
                         </Box>
@@ -138,7 +135,7 @@ const TimelineItem = ({ title, subtitle, date, grade, description, tags, index, 
                                 <Button
                                     size="small"
                                     onClick={() => setExpanded((s) => !s)}
-                                    sx={{ textTransform: 'none', p: 0 }}
+                                    sx={{ textTransform: 'none', p: 0, color: 'rgba(250, 204, 21, 0.7)' }}
                                 >
                                     {expanded ? 'Show less' : `Show ${description.length - 2} more`}
                                 </Button>
@@ -147,24 +144,23 @@ const TimelineItem = ({ title, subtitle, date, grade, description, tags, index, 
                     </Typography>
                     {tags && (
                         <Stack direction="row" spacing={0.75} sx={{ mt: 2.5, flexWrap: 'wrap', gap: 0.75 }}>
-                            {tags.map((tag, index) => (
+                            {tags.map((tag) => (
                                 <Chip
                                     key={tag}
                                     label={tag}
                                     size="small"
                                     sx={{
-                                        background: index % 2 === 0 ? 'rgba(6, 182, 212, 0.05)' : 'rgba(59, 130, 246, 0.05)',
-                                        border: index % 2 === 0
-                                            ? '1px solid rgba(6, 182, 212, 0.3)'
-                                            : '1px solid rgba(59, 130, 246, 0.3)',
-                                        color: index % 2 === 0 ? '#67e8f9' : '#93c5fd',
+                                        background: 'rgba(255, 255, 255, 0.03)',
+                                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                                        color: '#94a3b8',
                                         fontWeight: 600,
                                         fontSize: '0.7rem',
                                         textTransform: 'uppercase',
                                         letterSpacing: '0.05em',
                                         '&:hover': {
-                                            background: index % 2 === 0 ? 'rgba(6, 182, 212, 0.2)' : 'rgba(59, 130, 246, 0.2)',
-                                            borderColor: index % 2 === 0 ? '#06b6d4' : '#3b82f6',
+                                            background: 'rgba(250, 204, 21, 0.05)',
+                                            borderColor: '#facc15',
+                                            color: '#facc15',
                                             transform: 'translateY(-2px)',
                                         },
                                     }}

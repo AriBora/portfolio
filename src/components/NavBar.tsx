@@ -67,10 +67,10 @@ const Navbar = ({ activeSection = 'Experience', onNavigate }: NavbarProps) => {
                 position="sticky"
                 elevation={0}
                 sx={{
-                    background: scrolled ? 'rgb(2, 6, 23)' : 'transparent',
+                    background: scrolled ? 'rgba(5, 5, 5, 0.85)' : 'transparent',
                     backdropFilter: scrolled ? 'blur(20px)' : 'none',
-                    borderBottom: scrolled ? '1px solid rgba(6, 182, 212, 0.5)' : '1px solid transparent',
-                    boxShadow: scrolled ? '0 10px 30px -10px rgba(6, 182, 212, 0.3)' : 'none',
+                    borderBottom: scrolled ? '1px solid rgba(250, 204, 21, 0.3)' : '1px solid transparent',
+                    boxShadow: scrolled ? '0 10px 30px -10px rgba(250, 204, 21, 0.15)' : 'none',
                     transition: 'all 0.3s ease',
                     zIndex: theme.zIndex.drawer + 1,
                 }}
@@ -103,7 +103,7 @@ const Navbar = ({ activeSection = 'Experience', onNavigate }: NavbarProps) => {
                                 fontFamily: '"JetBrains Mono", "Fira Code", monospace',
                                 fontWeight: 700,
                                 fontSize: '1.1rem',
-                                color: theme.palette.primary.main,
+                                color: "#facc15",
                                 letterSpacing: '-0.02em',
                             }}
                         >
@@ -134,7 +134,7 @@ const Navbar = ({ activeSection = 'Experience', onNavigate }: NavbarProps) => {
                                             key={item}
                                             onClick={() => handleNavClick(item)}
                                             sx={{
-                                                color: isActive ? theme.palette.primary.main : '#94a3b8',
+                                                color: isActive ? '#facc15' : '#94a3b8',
                                                 fontSize: '0.875rem',
                                                 fontWeight: 500,
                                                 textTransform: 'none',
@@ -144,7 +144,7 @@ const Navbar = ({ activeSection = 'Experience', onNavigate }: NavbarProps) => {
                                                 borderRadius: 2,
                                                 position: 'relative',
                                                 bgcolor: isActive
-                                                    ? 'rgba(6, 182, 212, 0.08)'
+                                                    ? 'rgba(250, 204, 21, 0.08)'
                                                     : 'transparent',
                                                 transition: 'all 0.2s ease',
                                                 '&:hover': {
@@ -163,25 +163,24 @@ const Navbar = ({ activeSection = 'Experience', onNavigate }: NavbarProps) => {
                         {/* Resume Button + Mobile Hamburger */}
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                             <Button
-                                variant="outlined"
+                                variant="contained"
                                 startIcon={<DownloadIcon sx={{ fontSize: '1rem !important' }} />}
                                 href={Profile.resumeUrl}
                                 sx={{
-                                    color: theme.palette.primary.main,
-                                    borderColor: theme.palette.primary.main,
+                                    color: '#000000',
+                                    bgcolor: '#facc15',
+                                    borderColor: '#facc15',
                                     fontSize: '0.8rem',
-                                    fontWeight: 600,
+                                    fontWeight: 700,
                                     textTransform: 'none',
                                     letterSpacing: '0.02em',
                                     px: 2,
                                     py: 0.6,
-                                    borderRadius: 2,
-                                    borderWidth: 1.5,
+                                    borderRadius: 1,
                                     transition: 'all 0.25s ease',
                                     '&:hover': {
-                                        bgcolor: 'rgba(6, 182, 212, 0.1)',
-                                        borderColor: theme.palette.primary.light,
-                                        boxShadow: '0 0 20px rgba(6, 182, 212, 0.15)',
+                                        bgcolor: '#eab308',
+                                        boxShadow: '0 0 20px rgba(250, 204, 21, 0.2)',
                                         transform: 'translateY(-1px)',
                                     },
                                 }}
@@ -240,7 +239,7 @@ const Navbar = ({ activeSection = 'Experience', onNavigate }: NavbarProps) => {
                                     borderRadius: 2,
                                     mb: 0.5,
                                     bgcolor: isActive
-                                        ? 'rgba(6, 182, 212, 0.08)'
+                                        ? 'rgba(250, 204, 21, 0.08)'
                                         : 'transparent',
                                     '&:hover': {
                                         bgcolor: 'rgba(148, 163, 184, 0.06)',
@@ -252,7 +251,7 @@ const Navbar = ({ activeSection = 'Experience', onNavigate }: NavbarProps) => {
                                     primaryTypographyProps={{
                                         sx: {
                                             color: isActive
-                                                ? theme.palette.primary.main
+                                                ? '#facc15'
                                                 : '#94a3b8',
                                             fontWeight: isActive ? 600 : 400,
                                             fontSize: '0.95rem',

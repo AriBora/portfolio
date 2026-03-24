@@ -1,8 +1,9 @@
 import { Box } from '@mui/material';
 import Navbar from './NavBar';
-import HeroSection from './HeroSection';
+import IntroSection from './IntroSection';
 import MainContent from './MainContent';
 import Footer from './Footer';
+import StarBackground from './StarBackground';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const PortfolioLayout = () => {
@@ -18,8 +19,9 @@ const PortfolioLayout = () => {
                 bgcolor: 'transparent',
             }}
         >
+            <StarBackground />
             <Navbar activeSection={activeSection.charAt(0).toUpperCase() + activeSection.slice(1)} />
-            
+
             {/* Centered Content Wrapper */}
             <Box
                 sx={{
@@ -31,7 +33,7 @@ const PortfolioLayout = () => {
                     flexDirection: 'column',
                 }}
             >
-                <HeroSection />
+                <IntroSection />
                 <MainContent />
             </Box>
 
